@@ -105,6 +105,7 @@ const getDiv = (label, value) => {
   const valueDiv = document.createElement('div');
   valueDiv.style.marginLeft = '4px';
   valueDiv.innerText = value || 'N/A';
+  valueDiv.style.maxWidth = '300px';
   div.appendChild(title);
   div.appendChild(valueDiv)
   return div;
