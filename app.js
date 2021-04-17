@@ -14,7 +14,7 @@ function debounce(callback, wait) {
 const getMovies = (e) => {
   const { value } = e.target;
   if(value.length > 2) {
-    const url = `http://www.omdbapi.com/?s=${value}&apikey=a5a3bcde`;
+    const url = `https://www.omdbapi.com/?s=${value}&apikey=a5a3bcde`;
     fetch(url)
       .then((resp) => resp.json())
       .then(data => {
@@ -40,7 +40,7 @@ const getMovieDetails = (e) => {
   modal.style.display = 'block';
   const parent = modal.querySelector('.movieDetails');
   parent.innerHTML = '';
-  const url = `http://www.omdbapi.com/?i=${id}&apikey=a5a3bcde`;
+  const url = `https://www.omdbapi.com/?i=${id}&apikey=a5a3bcde`;
   fetch(url)
   .then(resp => resp.json())
   .then(data => {
