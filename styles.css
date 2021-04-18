@@ -28,6 +28,10 @@ main {
   color: #fff;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: black;
+  box-shadow: 1px 2px 8px #2b1f1f;
 }
 
 .searchContainer {
