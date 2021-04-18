@@ -165,3 +165,8 @@ main {
   color: rgb(234, 169, 23);
   font-weight: bold;
 }
+
+.imgBorder {
+  border: 3px solid #fff;
+  border-radius: 3px;
+}

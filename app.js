@@ -56,7 +56,6 @@ const renderModalContent = (data) => {
   const parent = document.querySelector('.movieDetails');
   parent.appendChild(addCross())
   const image = document.createElement('img');
-  image.classList.add('imgBorder');
   if(Poster !== 'N/A') image.setAttribute('src', Poster);
   else image.setAttribute('alt', 'Image');
   const movieDiv = document.createElement('div');
