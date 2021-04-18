@@ -51,7 +51,8 @@ const getMovieDetails = (e) => {
 }
 
 const renderModalContent = (data) => {
-  const { Poster, Title, Year, Runtime, Released, Director, Genre, Language, BoxOffice, imdbRating, Country, Awards, imdbVotes } = data;
+  const { Poster, Title, Year, Runtime, Released, Director, Genre, Language, BoxOffice,
+    imdbRating, Country, Awards } = data;
   const parent = document.querySelector('.movieDetails');
   parent.appendChild(addCross())
   const image = document.createElement('img');
@@ -69,9 +70,8 @@ const renderModalContent = (data) => {
   movieDiv.appendChild(getDiv('Genre', Genre));
   movieDiv.appendChild(getDiv('Language', Language));
   movieDiv.appendChild(getDiv('Box Office', BoxOffice));
-  movieDiv.appendChild(getDiv('Country', Country));
   movieDiv.appendChild(getDiv('Awards', Awards));
-  movieDiv.appendChild(getDiv('IMDb Votes', imdbVotes));
+  movieDiv.appendChild(getDiv('Country', Country));
   parent.appendChild(image);
   parent.appendChild(movieDiv);
 }
@@ -101,10 +101,10 @@ const getDiv = (label, value) => {
   div.style.marginBottom = '4px';
   const title = document.createElement('strong');
   title.innerText = label;
-  title.style.width = '120px';
-  title.style.color = '#eaa917';
-  const valueDiv = document.createElement('div');
+  title.classList.add('detailLabel');
+  const valueDiv = document.createElement('span');
   valueDiv.style.marginLeft = '4px';
+  valueDiv.style.display = 'inline-block';
   valueDiv.innerText = value || 'N/A';
   valueDiv.style.maxWidth = '300px';
   div.appendChild(title);
