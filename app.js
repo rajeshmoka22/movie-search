@@ -59,6 +59,7 @@ const renderModalContent = (data) => {
   if(Poster !== 'N/A') image.setAttribute('src', Poster);
   else image.setAttribute('alt', 'Image');
   const movieDiv = document.createElement('div');
+  movieDiv.classList.add('movieInfo');
   movieDiv.appendChild(getTitle(Title));
   movieDiv.appendChild(getDiv('IMDb Rating', imdbRating));
   movieDiv.appendChild(getDiv('Year', Year));
